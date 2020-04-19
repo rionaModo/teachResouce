@@ -647,7 +647,25 @@ body{
     top:0.5rem;
     right: 0.5rem;;
 }
+@keyframes pageTextAnimation23 {
+    0% {
+        transform:translate3d(0,8rem,0);
+        -webkit-transform:translate3d(0,8rem,0);
+        display: block;
+    }
 
+    to {
+        display: block;
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+}
+
+.page23-answer{
+    display: none;
+    -webkit-animation: pageTextAnimation23 1s ease-in ;
+    animation: pageTextAnimation23 1s ease-in ;
+}
 /*------------ page23 css end-------------------*/
 
 /*------------ page24 css start-------------------*/

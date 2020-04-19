@@ -13,17 +13,20 @@ function handleNext(id){
         mapHandle.handleNextHandle();   
     });
 }
-function handlePage4(){
+function handlePage4(showId, hideId){
     mapHandlePageAnimation4.handleNextHandle();
 }
-function handlePage15(){
+function handlePage15(showId, hideId){
     HandlePageAnimation15.handleNextHandle();
 }
-function handlePage19(){
+function handlePage19(showId, hideId){
     HandleBollPage19.handleNextHandle('page19-boll-container');
 }
-function handlePage20(){
+function handlePage20(showId, hideId){
     HandleBollPage20.handleNextHandle('page20-boll-container');
+}
+function handlePage23(showId, hideId){
+    HandlePageAnimation23.handleNextHandle();
 }
 var mapHandle = {
     nextStep: 1,
@@ -192,6 +195,7 @@ var HandlePageAnimation15 = {
                 $("#page15-right-one,#page15-right-two,#page15-right-three,#page15-right-four").hide()
                 return showPage('ppt-page16', 'ppt-page15');
         }
+        // showPage('ppt-page24', 'ppt-page23')
     }
 }
 var HandleBollPage19 = {
@@ -259,8 +263,20 @@ HandleBollPage20.handleNextHandle = function (id) {
             return showPage('ppt-page21', 'ppt-page20');
     }
 }
+var HandlePageAnimation23 = {
+    nextStep: 1,
+    handleNextHandle:function(){
+        if(this.nextStep>7){
+            showPage('ppt-page24', 'ppt-page23')
+            $(".page23-answer").hide();
+            return;
+        }
+        $("#page23-answer-" + this.nextStep).show();
+        this.nextStep++
+        // showPage('ppt-page24', 'ppt-page23')
+    }
+}
 $(document).ready(function(){
-    // showPage('ppt-page3', 'ppt-page2')
-    showPage('ppt-page19', 'ppt-page11')
+    showPage('ppt-page23', 'ppt-page11')
     htmlFont()
 })

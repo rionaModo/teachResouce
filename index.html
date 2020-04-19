@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="utf-8">
+	<title>ppt</title>
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no,user-scalable=no">
+	<meta name="x5-orientation" content="portrait">
+	<meta name="format-detection" content="telephone=no">
+	<!--<meta name="screen-orientation" content="portrait">-->
+    <link href="./static/css/reset.css" rel="stylesheet"/>
+    <link href="./static/css/index.css" rel="stylesheet"/>
+    <script type="text/javascript" src="./static/js/lib/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./static/js/index.js"></script>
+   
+</head>
+<body>
+    <div class="main-ppt">
+		<div class="page page1" id="ppt-page1" onclick="showPage('ppt-page2', 'ppt-page1')">
+			<img class="page-title" src="./static/images/title.jpg"></img>
+			<img class="page1-text" src="./static/images/page1/text.png"></img>
+			<div class="page-show">1/30</div>
+		</div>
+
+
+		<div class="page page2" id="ppt-page2" onclick="showPage('ppt-page3', 'ppt-page2')">
+			<div class="page2-content">
+					<div class="page2-N" ></div>
+					<div class="page2-E"></div>
+					<div class="page2-S"></div>
+					<div class="page2-W"></div>
+					<img class="page2-center" src="./static/images/page2/0.png"></img>
+			</div>
+			<div class="page-show">2/30</div>
+		</div>
+		<div class="page page3" id="ppt-page3" onclick="handleNext('ppt-page3', 'ppt-page2')">
+			<div class="page-hannan">
+				<img id="page-hannan-map" class="page3-iamg" src="./static/images/page3/hn.jpg"></img>
+				<div id="page-hannan-text" class="page3-text-box" >
+					<ul start="0">
+						<li id="p43" class="l1">
+							<span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:underline;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">Hainan</span><span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:none;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">
+								is in the </span><span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:underline;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">south</span><span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:none;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">
+								of China </span><span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:none;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">
+								<punctuation class="end">
+									<character>.</character>
+								</punctuation>
+							</span>
+						</li>
+					</ul>
+					<ul start="0">
+						<li id="p44" class="l1">
+							<span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:none;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">
+							</span><span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:none;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">海南省在中国的南部</span><span
+								style="-webkit-filter:drop-shadow(0.04rem 0.04rem 0.016rem rgb(192, 192, 192));font-weight:bold;text-transform:none;font-variant:normal;font-style:normal;letter-spacing:0rem;text-decoration:none;font-size:0.56rem;font-family:&quot;Comic Sans MS&quot;,&quot;宋体&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 0, 255);-webkit-text-stroke:transparent 0.014rem;">
+								<punctuation class="end">
+									<character>。</character>
+								</punctuation>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="page3-zj-title" class="page3-dt-title page3-zj-title">
+				<ul>
+					<li id="p35" class="page3-zj-title-ul">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">in
+							the east of China</span>
+					</li>
+					<li id="p36" class="page3-zj-title-ul">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						</span><span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">在中国东部</span>
+					</li>
+				</ul>
+			</div>
+			<div id="page3-mgn-title" class="page3-dt-title page3-mgn-title">
+				<ul>
+					<li id="p41" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">in
+							the north of China</span>
+					</li>
+					<li id="p42" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						</span><span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">在中国北部</span>
+					</li>
+				</ul>
+			</div>
+			<div id="page3-yn-title" class="page3-dt-title page3-yn-title">
+				<ol>
+					<li id="p37" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">in
+							the south of China</span>
+					</li>
+					<li id="p38" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						</span><span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">在中国南部</span>
+					</li>
+				</ol>
+			</div>
+			<div id="page3-xj-title" class="page3-dt-title page3-xj-title">
+				<ol>
+					<li id="p39" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">in
+							the west of China</span>
+					</li>
+					<li id="p40" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						</span><span
+							style="font-weight:bold;font-size:0.35rem;font-family:&quot;Comic Sans MS&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">在中国西部</span>
+					</li>
+				</ol>
+			</div>
+			<img class="page3-map page3-zj-map" id="page3-zj-map"  src="./static/images/page3/zj.jpg"></img>
+			<img class="page3-map page3-mgn-map" id="page3-mgn-map" src="./static/images/page3/mgn.jpg"></img>
+			<img class="page3-map page3-yn-map" id="page3-yn-map" src="./static/images/page3/yn.jpg"></img>
+			<img class="page3-map page3-xj-map" id="page3-xj-map" src="./static/images/page3/xj.png"></img>
+			<div class="page-show">3/30</div>
+		</div>
+
+		<div class="page page4" id="ppt-page4" onclick="handlePage4('ppt-page4', 'ppt-page3')">
+			<img id="page4-xj-map" class="page4-xj-map" src="./static/images/page4/xj.png"></img>
+			<img id="page4-xj-text" class="page4-xj-text" src="./static/images/page4/xjt.png"></img>
+			<img id="page4-xj-animate" class="page4-xj-animate" src="./static/images/page4/xjd.png"></img>
+			<div class="page-show">4/30</div>
+		</div>
+		<div class="page page5" id="ppt-page5" onclick="showPage('ppt-page6', 'ppt-page5')">
+			<div class="page-show">5/30</div>
+		</div>
+		<div class="page page6" id="ppt-page6" onclick="showPage('ppt-page7', 'ppt-page6')">
+			<div class="page-show">6/30</div>
+		</div>
+		<div class="page page7" id="ppt-page7" onclick="showPage('ppt-page8', 'ppt-page7')">
+			<div class="page-show">7/30</div>
+		</div>
+		<div class="page page8" id="ppt-page8" onclick="showPage('ppt-page9', 'ppt-page8')">
+			<div class="page-show">8/30</div>
+		</div>
+		<div class="page page9" id="ppt-page9" onclick="showPage('ppt-page10', 'ppt-page9')">
+			<div class="page-show">9/30</div>
+		</div>
+		<div class="page page10" id="ppt-page10" onclick="showPage('ppt-page11', 'ppt-page10')">
+			<div class="page-show">10/30</div>
+		</div>
+		<div class="page page11" id="ppt-page11" onclick="showPage('ppt-page12', 'ppt-page11')">
+			<div class="page-show">11/30</div>
+		</div>
+		<div  class="page page12" id="ppt-page12" onclick="showPage('ppt-page13', 'ppt-page12')">
+			<div  class="page12-text-box" >
+				<ul start="0">
+					<li id="p157" class="l1">
+						<span
+							style="font-weight:bold;font-size:1.1rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+						</span><span
+							style="font-weight:bold;font-size:1.1rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(112, 48, 160);">Module
+							6 Unit 2</span>
+					</li>
+				</ol>
+				<ul start="0">
+					<li id="p158" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.9rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">She
+							visited the Tianchi Lake</span><span
+							style="font-weight:bold;font-size:0.9rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span>
+					</li>
+				</ol>
+			</div>
+			<div class="page-show">12/30</div>
+		</div>
+		<div class="page page13" id="ppt-page13" onclick="showPage('ppt-page14', 'ppt-page13')">
+			<div class="page-show">13/30</div>
+		</div>
+		<div class="page page14" id="ppt-page14" onclick="showPage('ppt-page15', 'ppt-page14')">
+			<img id="page14-question" class="page14-question" src="./static/images/page14/question.jpg"></img>
+			<div id="page14-text-box" class="page14-text-box">
+				<ul>
+					<li id="p183" class="page14-text-line">
+						<span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">Questions</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+							<punctuation class="end">
+								<character>:</character>
+							</punctuation>
+						</span>
+					</li>
+					<li id="p184" class="page14-text-line">
+						<span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">1</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">When
+							did Lingling go to Xinjiang</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation>?</punctuation>
+						</span>
+					</li>
+					<li id="p189"class="page14-text-line" init-hidden="1"
+						style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+						<span
+							style="font-style:italic;font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 112, 192);">Last
+							July</span><span
+							style="font-style:italic;font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 112, 192);">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span>
+					</li>
+				</ul>
+				<ul start="2">
+					<li  class="page14-text-line">
+						<span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">2</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Who
+							did Lingling go with</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation>?</punctuation>
+						</span>
+					</li>
+					<li class="page14-text-line" init-hidden="1"
+						style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+						<span
+							style="font-style:italic;font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 112, 192);">Her
+							parents</span><span
+							style="font-style:italic;font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 112, 192);">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span>
+					</li>
+				</ul>
+				<ul start="3">
+					<li class="page14-text-line">
+						<span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">3</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">What
+							did she do there</span><span
+							style="font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation>?</punctuation>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="page14-img" id="pc-15364" style="">
+				<div class="cc">
+					<div class="render-container" style="width:5.394rem;height:4.106rem;left:0rem;top:0rem">
+						<div class="image-container" style="width:100%;height:100%;overflow:hidden">
+							<img src="//h5.ppj.io/ZBFbVWuh/images/image20_276274.jpg"
+								style="width:13.307rem;height:6.151rem;position:relative;left:-6.657rem;top:-1.256rem;display:block">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-show">14/30</div>
+		</div>
+		<div class="page page15" id="ppt-page15" onclick="showPage('ppt-page16', 'ppt-page15')">
+			<img class="page15-title" src="./static/images/page15/title.png"></img>
+			<div class="page15-bfc-contenter">
+					<ul class="page15-left">
+							<li class="page15-img-li">
+								<img class="page15-img" src="./static/images/page15/hourse.png"></img>
+							</li>
+							<li class="page15-img-li">
+								<img class="page15-img" src="./static/images/page15/climb.png"></img>
+							</li>
+							<li class="page15-img-li">
+								<img class="page15-img" src="./static/images/page15/visit.png"></img>
+							</li>
+							<li class="page15-img-li">
+								<img class="page15-img" src="./static/images/page15/taken.jpg"></img>
+							</li>
+						</ul>
+						<ul class="page15-right">
+							<li class="page15-text-li">
+								<img class="page15-text-img" src="./static/images/page15/ridet.png"></img>
+							</li>
+							<li class="page15-text-li">
+								<img class="page15-text-img" src="./static/images/page15/climbt.png"></img>
+							</li>
+							<li class="page15-text-li">
+								<img class="page15-text-img" src="./static/images/page15/visittxt.png"></img>
+							</li>
+							<li class="page15-text-li">
+								<img class="page15-text-img" src="./static/images/page15/token.png"></img>
+							</li>
+						</ul>
+			</div>
+			<div class="page-show">15/30</div>
+		</div>
+		<div class="page page16" id="ppt-page16" onclick="showPage('ppt-page17', 'ppt-page16')">
+			<div class="page-show">16/30</div>
+		</div>
+		<div class="page page17" id="ppt-page17" onclick="showPage('ppt-page18', 'ppt-page17')">
+			<div class="page-show">17/30</div>
+		</div>
+		<div class="page page18" id="ppt-page18" onclick="showPage('ppt-page19', 'ppt-page18')">
+			<!-- <div class="page18-text-box">
+				
+			</div> -->
+			<ul class="page18-text-box-ul page18-text-box">
+				<li class="page18-text-box-title">
+					<span
+						style="font-weight:bold;font-size:0.6rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						小组齐心协力</span>
+				</li>
+				<li id="p243" class="l1">
+					<span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">游戏规则</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						<punctuation class="end">
+							<character>：</character>
+						</punctuation>
+					</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">请小组中的一位同学上台背对屏幕</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						<punctuation class="end">
+							<character>，</character>
+						</punctuation>
+					</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">本组其他同学根据屏幕用动作做出提示</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						<punctuation class="end">
+							<character>，</character>
+						</punctuation>
+					</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">这位同学要用含有过去式的一句话来描述图片</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						<punctuation class="end">
+							<character>，</character>
+						</punctuation>
+					</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">描述正确的小组加分</span><span
+						style="font-weight:bold;font-size:0.48rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+						<punctuation class="end">
+							<character>。</character>
+						</punctuation>
+					</span>
+				</li>
+			</ul>
+			<div class="page18-li page18-li-first">
+				<img  class="page18-li-img" src="./static/images/page18/token.jpg"></img>
+			</div>
+			<div class="page18-li page18-li-second">
+				<img  class="page18-li-img" src="./static/images/page18/visit.png"></img>
+			</div>
+			<div class="page18-li page18-li-thirth">
+				<img  class="page18-li-img" src="./static/images/page18/ride.png"></img>
+			</div>
+			<div class="page18-li page18-li-four">
+				<img  class="page18-li-img" src="./static/images/page18/climb.png"></img>
+			</div>
+			<div class="page18-boll-container">
+				<svg preserveAspectRatio="xMinYMin meet" viewBox="-2.54 -2.54 57.15 61.2775"
+					style="width:0.8rem;height:0.8rem"
+					overflow="visible">
+					<path
+						d="M0 28.099A26.035 28.099 0 0 1 26.035 0 26.035 28.099 0 0 1 52.07 28.099a26.035 28.099 0 0 1-26.035 28.098A26.035 28.099 0 0 1 0 28.1z"
+						fill="#F00" stroke="#385D8A" fill-rule="evenodd" stroke-width="2.54" color="#FFF"></path>
+				</svg>
+			</div>
+			<div class="page-show">18/30</div>
+		</div>
+
+
+
+		<div class="page page19" id="ppt-page19" onclick="showPage('ppt-page20', 'ppt-page19')">
+			<div class="page19-li page19-li-first">
+				<img  class="page19-li-img" src="./static/images/page18/token.jpg"></img>
+			</div>
+			<div class="page19-li page19-li-second">
+				<img  class="page19-li-img" src="./static/images/page18/visit.png"></img>
+			</div>
+			<div class="page19-li page19-li-thirth">
+				<img  class="page19-li-img" src="./static/images/page18/ride.png"></img>
+			</div>
+			<div class="page19-li page19-li-four">
+				<img  class="page19-li-img" src="./static/images/page18/climb.png"></img>
+			</div>
+			<div class="page19-boll-container">
+				<svg preserveAspectRatio="xMinYMin meet" viewBox="-2.54 -2.54 57.15 61.2775"
+					style="width:0.8rem;height:0.8rem"
+					overflow="visible">
+					<path
+						d="M0 28.099A26.035 28.099 0 0 1 26.035 0 26.035 28.099 0 0 1 52.07 28.099a26.035 28.099 0 0 1-26.035 28.098A26.035 28.099 0 0 1 0 28.1z"
+						fill="#F00" stroke="#385D8A" fill-rule="evenodd" stroke-width="2.54" color="#FFF"></path>
+				</svg>
+			</div>
+			<div class="page-show">19/30</div>
+		</div>
+		<div class="page page20" id="ppt-page20" onclick="showPage('ppt-page21', 'ppt-page20')">
+			<div class="page19-li page19-li-first">
+				<img  class="page19-li-img" src="./static/images/page18/token.jpg"></img>
+			</div>
+			<div class="page19-li page19-li-second">
+				<img  class="page19-li-img" src="./static/images/page18/visit.png"></img>
+			</div>
+			<div class="page19-li page19-li-thirth">
+				<img  class="page19-li-img" src="./static/images/page18/ride.png"></img>
+			</div>
+			<div class="page19-li page19-li-four">
+				<img  class="page19-li-img" src="./static/images/page18/climb.png"></img>
+			</div>
+			<div class="page19-boll-container">
+				<svg preserveAspectRatio="xMinYMin meet" viewBox="-2.54 -2.54 57.15 61.2775"
+					style="width:0.8rem;height:0.8rem"
+					overflow="visible">
+					<path
+						d="M0 28.099A26.035 28.099 0 0 1 26.035 0 26.035 28.099 0 0 1 52.07 28.099a26.035 28.099 0 0 1-26.035 28.098A26.035 28.099 0 0 1 0 28.1z"
+						fill="#F00" stroke="#385D8A" fill-rule="evenodd" stroke-width="2.54" color="#FFF"></path>
+				</svg>
+			</div>
+			<div class="page-show">20/30</div>
+		</div>
+		<div class="page page21" id="ppt-page21" onclick="showPage('ppt-page22', 'ppt-page21')">
+			<div class="page-show">21/30</div>
+		</div>
+		<div class="page page22" id="ppt-page22" onclick="showPage('ppt-page23', 'ppt-page22')">
+			<img  class="page22-img" src="./static/images/page22/title.jpg"></img>
+			<div id="t16" class="page22-text-box" >
+				<ol start="0">
+					<li id="p297" class="l1">
+						<span
+							style="font-weight:bold;font-size:1.2rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(255, 0, 0);">
+							Extension Practice</span>
+					</li>
+				</ol>
+			</div>
+			<div class="page-show">22/30</div>
+		</div>
+		<div  class="page page23" id="ppt-page23" onclick="showPage('ppt-page24', 'ppt-page23')">
+			<img  class="page23-img-title" src="./static/images/page23/title.png"></img>
+			<img  class="page23-img-dh" src="./static/images/page23/dh.GIF"></img>
+			<div id="24578" class="df"
+				style="position:absolute;top:0rem;left:0rem;min-width:16.38rem;min-height:18.222rem;transform-origin:center center;-webkit-transform-origin:center center;transform:translate3d(2rem,1.5rem,0);;-webkit-transform:translate3d(2rem,1.5rem,0);">
+				<div class="pin-container" id="pc-24578" style="">
+					<div class="cc">
+						<div class="render-container" style="width:16.38rem;height:18.222rem;left:0rem;top:0rem">
+							<div id="t17" class="text-box"
+								style="width:16.398rem;height:18.241rem;box-sizing:border-box;top:0rem;left:0rem">
+								<ol start="0">
+									<li id="p310" class="l1">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">go</span><span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">—</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p311" class="l1">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">ride</span><span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">—</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p312" class="l1">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">take</span><span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">—</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p313" class="l1">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">swim</span><span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">—</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p314" class="l1">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">eat</span><span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">—</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p315" class="l1">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">climb</span><span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">—</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p316" class="l1">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">visit</span><span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">—</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p317" class="l1">
+			
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="4" class="df"
+				style="position:absolute;top:0rem;left:0rem;min-width:16.38rem;min-height:18.222rem;transform-origin:center center;-webkit-transform-origin:center center;transform:translate3d(6rem,1.5rem,0);;-webkit-transform:translate3d(6rem,1.5rem,0);">
+				<div class="pin-container" id="pc-4" style="">
+					<div class="cc">
+						<div class="render-container" style="width:16.38rem;height:18.222rem;left:0rem;top:0rem">
+							<div id="t18" class="text-box"
+								style="width:16.398rem;height:18.241rem;box-sizing:border-box;top:0rem;left:0rem">
+								<ol start="0">
+									<li id="p318" class="l1" init-hidden="1"
+										style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">went</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p319" class="l1" init-hidden="1"
+										style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">rode</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p320" class="l1" init-hidden="1"
+										style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">took</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p321" class="l1" init-hidden="1"
+										style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">swam</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p322" class="l1" init-hidden="1"
+										style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">ate</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p323" class="l1" init-hidden="1"
+										style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">climbed</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p324" class="l1" init-hidden="1"
+										style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+										<span
+											style="font-size:0.8rem;font-family:&quot;Times New Roman&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">visited</span>
+									</li>
+								</ol>
+								<ol start="0">
+									<li id="p325" class="l1">
+			
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-show">23/30</div>
+		</div>
+		<div class="page page24" id="ppt-page24" onclick="showPage('ppt-page25', 'ppt-page24')">
+			<div class="page-show">24/30</div>
+		</div>
+		<div class="page page25" id="ppt-page25" onclick="showPage('ppt-page26', 'ppt-page25')">
+			<div class="page-show">25/30</div>
+		</div>
+		<div class="page page26" id="ppt-page26" onclick="showPage('ppt-page27', 'ppt-page26')">
+			<div class="page-show">26/30</div>
+		</div>
+		<div class="page page27" id="ppt-page27" onclick="showPage('ppt-page28', 'ppt-page27')">
+			<img  class="page27-img-content" src="./static/images/page27/text.png"></img>
+			<div class="page-show">27/30</div>
+		</div>
+		<div class="page page28" id="ppt-page28" onclick="showPage('ppt-page29', 'ppt-page28')">
+			<img  class="page28-img-content" src="./static/images/page28/cxt.png"></img>
+			<div class="page-show">28/30</div>
+		</div>
+		<div class="page page29" id="ppt-page29" onclick="showPage('ppt-page30', 'ppt-page29')">
+			<div id="t26" class="page29-text-box" style="">
+				<ol start="0">
+					<li id="p413" class="l1">
+						<span
+							style="font-weight:bold;font-style:italic;font-size:0.9rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(112, 48, 160);">Homework</span><span
+							style="font-weight:bold;font-style:italic;font-size:0.9rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(112, 48, 160);">
+							<punctuation class="end">
+								<character>:</character>
+							</punctuation>
+						</span>
+					</li>
+				</ol>
+				<ol start="0">
+					<li id="p414" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">1</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Read
+							your books P35-37</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span>
+					</li>
+				</ol>
+				<ol start="0">
+					<li id="p415" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">2</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Introduce
+							a photo of your travel to your friends in English</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation>(</punctuation>
+						</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">用英语向你的朋友介绍一张你去旅行拍的照片</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>。</character>
+							</punctuation>
+						</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>)</character>
+							</punctuation>
+						</span>
+					</li>
+				</ol>
+				<ol start="0">
+					<li id="p416" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">3</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Write
+							about your trip</span><span
+							style="font-weight:bold;font-size:0.7rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">
+							<punctuation class="end">
+								<character>.</character>
+							</punctuation>
+						</span>
+					</li>
+				</ol>
+				<ol start="0">
+					<li id="p417" class="l1">
+			
+					</li>
+				</ol>
+			</div>
+			<div class="page-show">29/30</div>
+		</div>
+		<div class="page page30" id="ppt-page30" onclick="showPage('ppt-page1', 'ppt-page30')">
+			<div class="page-show">30/30</div>
+		</div>
+    </div>
+</body>
+</html>
+

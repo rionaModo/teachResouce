@@ -1,0 +1,613 @@
+body{
+    background-color: #efefef;
+    margin: 0;
+}
+.main-ppt{
+    background-color: #ffffff;
+    height: 98vh;
+    width: 140vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+.page-show{
+    position: absolute;
+    bottom: 0.2rem;
+    right:  0.2rem;
+    font-size: .2rem;
+    z-index: 10;
+    color: rgba(130,130,130,0.6);
+}
+/*------------ page1 css start-------------------*/
+.page1{
+    background-image: url(../images/page1/bg.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat
+    /* display: block; */
+}
+.page-title{
+    width: 60%;
+}
+.page1-text{
+    width: 100%;
+    margin: 0 auto;
+}
+.page1-show{
+    color: rgba(130,130,130,0.6);
+}
+/*------------ page1 css end-------------------*/
+
+/*------------ page2 css start-------------------*/
+.page2{
+    overflow: hidden;
+}
+.page2-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+}
+.page2-center{
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+.page2-N, .page2-S, .page2-E, .page2-W{
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../images/page2/derection.jpg);
+    background-size: 6rem 6rem;
+    position: absolute;
+    background-repeat: no-repeat
+
+}
+.page2-N{
+    top: -3.2rem;
+    left: -0.5rem;
+}
+.page2-S{
+    bottom: -3.2rem;
+    left: -0.54rem;
+    background-position: 0 3rem;
+}
+.page2-W{
+    top: -0.5rem;
+    left: -3.2rem;
+    background-position: 3rem 3rem;
+}
+.page2-E{
+    top: -.5rem;
+    right: -3rem;
+    background-position: 3rem 0px;
+}
+/*------------ page2 css end-------------------*/
+
+
+/*------------ page3 css start-------------------*/
+.page-hannan{
+    position: relative;
+    /* background-image: url(../images/page3/hn.jpg); */
+    background-size: contain;
+    background-position: center center;
+    height: 100%;
+    background-repeat: no-repeat;
+    /* display: none; */
+    z-index: 7;
+}
+.page3-text-box{
+    text-align: center;
+    width: 100%;
+    line-height: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+    
+}
+.page3-iamg{
+    object-fit: contain;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.page3-map{
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    display: none;
+    opacity:'0.5';
+    top:100%;
+}
+.page3-dt-title{
+    width: 50%;
+    line-height: 0.35rem;
+    position: absolute;
+    text-align: center;
+    z-index: 6; 
+    display: none;  
+    opacity:'0.5';
+    top:100%;
+}
+.page3-zj-title{
+    left: 0;
+    /* top:-0.1rem; */
+}
+.page3-mgn-title{
+    /* top:-0.1rem; */
+    right: 0;
+}
+.page3-yn-title{
+    /* bottom:0.1rem; */
+    left: 0;
+}
+.page3-xj-title{
+    /* bottom:0.1rem; */
+    right: 0;
+}
+.page3-zj-map{
+    left: 5%;
+    /* top:6%; */
+}
+.page3-mgn-map{
+    right: 5%;
+    top:6%;
+}
+.page3-yn-map{
+    left: 5%;
+    /* bottom:6%; */
+}
+.page3-xj-map{
+    right: 5%;
+    /* bottom:6%; */
+}
+/*------------ page3 css end-------------------*/
+
+
+/*------------ page4 css start-------------------*/
+.page4-xj-map{
+    position: absolute;
+    top: 100%;
+    height: 0;
+    width: 100%;
+    /* visibility: hidden; */
+}
+.page4-xj-text{
+    position: absolute;
+    top: 100%;
+    left: 12%;
+    height: 0;
+    width: 30%;
+}
+
+.page4-xj-animate{
+    position: absolute;
+    height: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+}
+/*------------ page4 css end-------------------*/
+
+
+/*------------ page5 css start-------------------*/
+.page5{
+    background-image: url(../images/page5/xj.jpg);
+    background-size: cover;
+}
+/*------------ page5 css end-------------------*/
+
+
+/*------------ page6 css start-------------------*/
+.page6{
+    background-image: url(../images/page6/tree.jpg);
+    background-size: cover;
+}
+/*------------ page6 css end-------------------*/
+
+
+/*------------ page7 css start-------------------*/
+.page7{
+    background-image: url(../images/page7/tree.jpg);
+    background-size: cover;
+}
+/*------------ page7 css end-------------------*/
+
+
+/*------------ page8 css start-------------------*/
+.page8{
+    background-image: url(../images/page8/ice.jpg);
+    background-size: cover;
+}
+/*------------ page8 css end-------------------*/
+
+
+/*------------ page9 css start-------------------*/
+.page9{
+    background-image: url(../images/page9/lake.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+/*------------ page9 css end-------------------*/
+
+
+/*------------ page10 css start-------------------*/
+.page10{
+    background-image: url(../images/page10/hu.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+/*------------ page10 css end-------------------*/
+
+
+/*------------ page11 css start-------------------*/
+.page11{
+    background-repeat: no-repeat;
+    background-image: url(../images/page11/bg.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+}
+
+/*------------ page11 css end-------------------*/
+
+
+/*------------ page12 css start-------------------*/
+.page12{
+    background-repeat: no-repeat;
+    background-image: url(../images/page12/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.page12-text-box{
+    text-align: center;
+    padding-top: 15%;
+}
+/*------------ page12 css end-------------------*/
+
+
+/*------------ page13 css start-------------------*/
+.page13{
+    background-repeat: no-repeat;
+    background-image: url(../images/page13/page13.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+}
+/*------------ page13 css end-------------------*/
+
+
+/*------------ page14 css start-------------------*/
+.page14-question{
+    position: absolute;
+    top: 0.4rem;
+    left: 50%;
+    margin-left: -0.8rem;
+    padding-top: .5rem;
+    margin: 0 auto;
+    display: block;
+    width: 1.6rem;
+    height: 1.8rem;
+}
+.page14-text-box{
+    padding-left: 0.5rem;
+    padding-top: 2rem;
+}
+.page14-text-line{
+    line-height: .7rem;
+}
+.page14-img{
+    transform: scale(0.5);
+    position: absolute;
+    right: 0.01rem;
+    bottom: 0.4rem;
+}
+/*------------ page14 css end-------------------*/
+
+
+/*------------ page15 css start-------------------*/
+
+.page15-title{
+    margin-left: 0.4rem;
+    padding-left: 25%;
+    height: 1rem;
+}
+.page15-bfc-contenter{
+    height: 80%;
+    margin: 0 0.4rem
+    /* overflow: hidden; */
+}
+.page15-left{
+    /* margin-top: 10%; */
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    float: left;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around; */
+}
+.page15-img-li{
+    height: 23%;
+    margin-bottom: 2%;
+}
+.page15-img{
+    height: 100%;
+    max-width: 100%;
+}
+.page15-right{
+    height: 100%;
+    overflow: hidden;
+}
+.page15-text-li{
+    height: 22%;
+    margin-bottom: 2%;
+    border: 1px solid #eee;
+}
+.page15-text-img{
+    max-height: 100%;
+    width: 98%;
+}
+/*------------ page16 css start-------------------*/
+.page16{
+    background-repeat: no-repeat;
+    background-image: url(../images/page13/page13.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+}
+/*------------ page16 css end-------------------*/
+
+/*------------ page17 css start-------------------*/
+.page17{
+    background-repeat: no-repeat;
+    background-image: url(../images/page17/bj.jpg);
+    background-size: auto auto;
+    background-position: center center;
+}
+/*------------ page17 css end-------------------*/
+
+/*------------ page18 css start-------------------*/
+
+.page18-text-box{
+    line-height: 0.4rem;
+    box-sizing: border-box;
+    margin: 0 0.8rem;
+    padding-bottom: 0.2rem;
+    /* height: 2rem; */
+    
+}
+.page18-text-box-title{
+    padding-top: 0.1rem;
+    line-height: 0.5rem;
+    text-align: center;
+}
+/* .page18-imgs-content{
+    margin: 0 1rem;
+    flex: 1;
+    flex-shrink: 1;
+    box-sizing: border-box;
+    
+}
+.page18-li{
+    overflow: hidden;
+    height: 40%;
+    width: 45%;
+    float: left;
+}
+.page18-li:nth-child(2n){
+    float: right;
+    text-align: right;
+}
+.page18-li:nth-child(3n){
+    margin-top: 0.1rem;
+}
+.page18-li:nth-child(4n){
+    margin-top: 0.1rem;
+}
+.page18-li-img{
+    width: 50%;
+    max-height: 100%;
+} */
+.page18-li{
+    position: absolute;
+    width: 45%;
+    height: 3rem;  
+}
+.page18-li-first{
+    left: 1rem;
+    bottom: 3rem;
+}
+.page18-li-second{
+    text-align: right;
+    right: 1rem;
+    bottom: 3rem;
+}
+.page18-li-thirth{
+    left: 1rem;
+    bottom: 0rem;
+    /* vertical-align: bottom;
+    line-height: 100%; */
+}
+.page18-li-four{
+    text-align: right;
+    right: 1rem;
+    bottom: 0rem;
+}
+.page18-li-img{
+    width: 2.5rem;
+    max-height: 100%;
+}
+.page18-boll-container{
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    right: 50%;
+    bottom: 3rem;
+}
+/*------------ page18 css end-------------------*/
+
+/*------------ page19 css start-------------------*/
+.page19{
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+.page19-li{
+    /* position: absolute; */
+    width: 45%;
+    height: 45%;  
+    float: left;
+    overflow: hidden;
+    margin: 0 2.4%;
+    /* padding-bottom: 4.8%; */
+}
+.page19-li:nth-child(2n){
+    text-align: right;
+    float: right;
+}
+.page19-li-thirth,.page19-li-four{
+    display: flex;
+    align-items:flex-end;
+}
+.page19-li-four{
+    justify-content: flex-end
+   
+}
+.page19-li-img{
+    height: 80%;
+
+}
+.page19-boll-container{
+    position: absolute;
+    top:45%;
+    left: 45%;
+}
+/*------------ page19 css end-------------------*/
+
+/*------------ page20 css start-------------------*/
+/*------------ page20 css end-------------------*/
+
+/*------------ page21 css start-------------------*/
+.page21{
+    background-repeat: no-repeat;
+    background-image: url(../images/page21/bj.png);
+    background-size: auto 100%;
+    background-position: center center;
+}
+
+/*------------ page21 css end-------------------*/
+
+/*------------ page22 css start-------------------*/
+.page22{
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+}
+.page22-img{
+    display: block;
+    margin: 0 auto;
+    width: 45%;
+}
+.page22-text-box{
+    text-align: center
+}
+/*------------ page22 css end-------------------*/
+
+/*------------ page23 css start-------------------*/
+.page23{
+    line-height: 0.9rem;
+}
+.page23-img-title{
+    position: relative;
+    height: 2rem;
+    display: block;
+    z-index: 5;
+}
+.page23-img-dh{
+    height: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top:0.5rem;
+    right: 0.5rem;;
+}
+
+/*------------ page23 css end-------------------*/
+
+/*------------ page24 css start-------------------*/
+.page24{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    background-image: url(../images/page24/bj.jpg);
+}
+/*------------ page24 css end-------------------*/
+
+/*------------ page25 css start-------------------*/
+.page25{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    background-image: url(../images/page25/bj.jpg);
+}
+/*------------ page25 css end-------------------*/
+
+/*------------ page26 css start-------------------*/
+.page26{
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    background-image: url(../images/page26/bj.jpg);
+}
+/*------------ page26 css end-------------------*/
+
+/*------------ page27 css start-------------------*/
+
+.page27-img-content{
+    width: 95%;
+    margin-left: 8%;
+    margin-top: 10%;
+}
+/*------------ page27 css end-------------------*/
+
+/*------------ page28 css start-------------------*/
+.page28{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/page28/bj.GIF);
+}
+.page28-img-content{
+    width: 95%;
+    margin-left: 8%;
+    margin-top: 12%;
+}
+
+/*------------ page28 css end-------------------*/
+
+/*------------ page29 css start-------------------*/
+.page29{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/page29/bj.jpg);
+}
+.page29-text-box{
+    padding: .5rem;
+}
+/*------------ page29 css end-------------------*/
+
+/*------------ page30 css start-------------------*/
+.page30{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/page30/bj.jpg);
+}

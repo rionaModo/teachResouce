@@ -77,17 +77,17 @@ body{
 .page2-S{
     bottom: -3.2rem;
     left: -0.54rem;
-    background-position: 0 3rem;
+    background-position: 0 -3rem;
 }
 .page2-W{
     top: -0.5rem;
     left: -3.2rem;
-    background-position: 3rem 3rem;
+    background-position: -3rem -3rem;
 }
 .page2-E{
     top: -.5rem;
     right: -3rem;
-    background-position: 3rem 0px;
+    background-position: -3rem 0px;
 }
 /*------------ page2 css end-------------------*/
 

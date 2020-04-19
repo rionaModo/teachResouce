@@ -143,6 +143,6 @@ var mapHandlePage4 = {
 }
 $(document).ready(function(){
     // showPage('ppt-page3', 'ppt-page2')
-    showPage('ppt-page1', 'ppt-page11')
+    showPage('ppt-page2', 'ppt-page11')
     htmlFont()
 })

@@ -132,6 +132,40 @@
 			<img class="page3-map page3-mgn-map" id="page3-mgn-map" src="./static/images/page3/mgn.jpg"></img>
 			<img class="page3-map page3-yn-map" id="page3-yn-map" src="./static/images/page3/yn.jpg"></img>
 			<img class="page3-map page3-xj-map" id="page3-xj-map" src="./static/images/page3/xj.png"></img>
+
+			<div  class="page3-city-name page3-zj-name" id="page3-zj-name" >
+				<ol>
+					<li id="p45" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.45rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Zhejiang</span>
+					</li>
+				</ol>
+			</div>
+			<div class="page3-city-name page3-mgn-name" id="page3-mgn-name" >
+				<ol>
+					<li id="p46" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.5rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Inner
+							Mongolia</span>
+					</li>
+				</ol>
+			</div>
+			<div class="page3-city-name page3-yn-name" id="page3-yn-name">
+				<ol>
+					<li id="p47" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.45rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Yunnan</span>
+					</li>
+				</ol>
+			</div>
+			<div class="page3-city-name page3-xj-name" id="page3-xj-name">
+				<ol>
+					<li id="p48" class="l1">
+						<span
+							style="font-weight:bold;font-size:0.45rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;">Xinjiang</span>
+					</li>
+				</ol>
+			</div>
 			<div class="page-show">3/30</div>
 		</div>
 
@@ -218,8 +252,8 @@
 							<punctuation>?</punctuation>
 						</span>
 					</li>
-					<li id="p189"class="page14-text-line" init-hidden="1"
-						style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+					<li id="page14-answer-one" class="page14-text-line page14-answer-one" 
+						>
 						<span
 							style="font-style:italic;font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 112, 192);">Last
 							July</span><span
@@ -245,8 +279,7 @@
 							<punctuation>?</punctuation>
 						</span>
 					</li>
-					<li class="page14-text-line" init-hidden="1"
-						style="transform-origin: 50% 50% 0px; transform: translate3d(0px, 0px, 0px); visibility: visible;">
+					<li id="page14-answer-two" class="page14-text-line page14-answer-two" >
 						<span
 							style="font-style:italic;font-size:0.66rem;font-family:&quot;Calibri&quot;,&quot;Arial&quot;, Heiti, STHeiTi, sans-serif;color:rgb(0, 112, 192);">Her
 							parents</span><span
@@ -286,37 +319,38 @@
 			</div>
 			<div class="page-show">14/30</div>
 		</div>
-		<div class="page page15" id="ppt-page15" onclick="showPage('ppt-page16', 'ppt-page15')">
+
+		<div class="page page15" id="ppt-page15" onclick="handlePage15('ppt-page16', 'ppt-page15')">
 			<img class="page15-title" src="./static/images/page15/title.png"></img>
 			<div class="page15-bfc-contenter">
-					<ul class="page15-left">
-							<li class="page15-img-li">
-								<img class="page15-img" src="./static/images/page15/hourse.png"></img>
-							</li>
-							<li class="page15-img-li">
-								<img class="page15-img" src="./static/images/page15/climb.png"></img>
-							</li>
-							<li class="page15-img-li">
-								<img class="page15-img" src="./static/images/page15/visit.png"></img>
-							</li>
-							<li class="page15-img-li">
-								<img class="page15-img" src="./static/images/page15/taken.jpg"></img>
-							</li>
-						</ul>
-						<ul class="page15-right">
-							<li class="page15-text-li">
-								<img class="page15-text-img" src="./static/images/page15/ridet.png"></img>
-							</li>
-							<li class="page15-text-li">
-								<img class="page15-text-img" src="./static/images/page15/climbt.png"></img>
-							</li>
-							<li class="page15-text-li">
-								<img class="page15-text-img" src="./static/images/page15/visittxt.png"></img>
-							</li>
-							<li class="page15-text-li">
-								<img class="page15-text-img" src="./static/images/page15/token.png"></img>
-							</li>
-						</ul>
+				<ul class="page15-left">
+						<li class="page15-img-li">
+							<img class="page15-img" src="./static/images/page15/hourse.png"></img>
+						</li>
+						<li class="page15-img-li">
+							<img class="page15-img" src="./static/images/page15/climb.png"></img>
+						</li>
+						<li class="page15-img-li">
+							<img class="page15-img" src="./static/images/page15/visit.png"></img>
+						</li>
+						<li class="page15-img-li">
+							<img class="page15-img" src="./static/images/page15/taken.jpg"></img>
+						</li>
+					</ul>
+					<ul class="page15-right">
+						<li class="page15-text-li page15-right-one" id="page15-right-one">
+							<img class="page15-text-img" src="./static/images/page15/ridet.png"></img>
+						</li>
+						<li class="page15-text-li page15-right-two" id="page15-right-two">
+							<img class="page15-text-img" src="./static/images/page15/climbt.png"></img>
+						</li>
+						<li class="page15-text-li page15-right-three" id="page15-right-three">
+							<img class="page15-text-img" src="./static/images/page15/visittxt.png"></img>
+						</li>
+						<li class="page15-text-li page15-right-four" id="page15-right-four">
+							<img class="page15-text-img" src="./static/images/page15/token.png"></img>
+						</li>
+					</ul>
 			</div>
 			<div class="page-show">15/30</div>
 		</div>
@@ -396,7 +430,7 @@
 
 
 
-		<div class="page page19" id="ppt-page19" onclick="showPage('ppt-page20', 'ppt-page19')">
+		<div class="page page19" id="ppt-page19" onclick="handlePage19('ppt-page20', 'ppt-page19')">
 			<div class="page19-li page19-li-first">
 				<img  class="page19-li-img" src="./static/images/page18/token.jpg"></img>
 			</div>
@@ -409,7 +443,7 @@
 			<div class="page19-li page19-li-four">
 				<img  class="page19-li-img" src="./static/images/page18/climb.png"></img>
 			</div>
-			<div class="page19-boll-container">
+			<div class="page19-boll-container" id="page19-boll-container">
 				<svg preserveAspectRatio="xMinYMin meet" viewBox="-2.54 -2.54 57.15 61.2775"
 					style="width:0.8rem;height:0.8rem"
 					overflow="visible">
@@ -420,7 +454,7 @@
 			</div>
 			<div class="page-show">19/30</div>
 		</div>
-		<div class="page page20" id="ppt-page20" onclick="showPage('ppt-page21', 'ppt-page20')">
+		<div class="page page20" id="ppt-page20" onclick="handlePage20('ppt-page21', 'ppt-page20')">
 			<div class="page19-li page19-li-first">
 				<img  class="page19-li-img" src="./static/images/page18/token.jpg"></img>
 			</div>
@@ -433,7 +467,7 @@
 			<div class="page19-li page19-li-four">
 				<img  class="page19-li-img" src="./static/images/page18/climb.png"></img>
 			</div>
-			<div class="page19-boll-container">
+			<div class="page19-boll-container" id="page20-boll-container">
 				<svg preserveAspectRatio="xMinYMin meet" viewBox="-2.54 -2.54 57.15 61.2775"
 					style="width:0.8rem;height:0.8rem"
 					overflow="visible">

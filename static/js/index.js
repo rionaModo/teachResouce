@@ -5,29 +5,29 @@ function htmlFont () {
     document.documentElement.style.fontSize = deviceWidth / 12 + 'px';
   }
 function showPage(showId, hideId){
-    $("#" + showId).fadeIn();
     $("#" + hideId).fadeOut();
-    // $("#" + showId).css({
-    //     opacity: 1
-    // });
-    // $("#" + hideId).css({
-    //     opacity: 0
-    // });
-    
+    $("#" + showId).fadeIn(); 
 }
 function handleNext(id){
     $("#page-hannan-map").fadeOut("slow", function(){
         mapHandle.handleNextHandle();   
     });
 }
-
 function handlePage4(){
-    mapHandlePage4.handleNextHandle();
+    mapHandlePageAnimation4.handleNextHandle();
 }
-
+function handlePage15(){
+    HandlePageAnimation15.handleNextHandle();
+}
+function handlePage19(){
+    HandleBollPage19.handleNextHandle('page19-boll-container');
+}
+function handlePage20(){
+    HandleBollPage20.handleNextHandle('page20-boll-container');
+}
 var mapHandle = {
     nextStep: 1,
-    handleNextHandle(){
+    handleNextHandle:function(){
         switch(this.nextStep){
             case 1:
                 this.nextStep = 2
@@ -59,7 +59,14 @@ var mapHandle = {
                 top: '6%',
                 display: 'block',
                 opacity: '1',
-            }, 'slow');  
+            }, 'slow', function(){
+                $("#page3-zj-name").show();
+                $("#page3-zj-name").animate({
+                    top: '18%',
+                    display: 'block',
+                    opacity: '1',
+                }, 'slow');  
+            });  
         });
         
     },
@@ -75,7 +82,14 @@ var mapHandle = {
                 top: '6%',
                 display: 'block',
                 opacity: '1',
-            }, 'slow');  
+            }, 'slow', function(){
+                $("#page3-mgn-name").show();
+                $("#page3-mgn-name").animate({
+                    top: '8%',
+                    display: 'block',
+                    opacity: '1',
+                }, 'slow');  
+            });  
         });
     },
     showYN: function(){
@@ -88,7 +102,13 @@ var mapHandle = {
             $("#page3-yn-title").animate({
                 top: '85%',
                 opacity: '1',
-            }, 'slow');
+            }, 'slow', function(){
+                $("#page3-yn-name").show();
+                $("#page3-yn-name").animate({
+                    top: '75%',
+                    opacity: '1',
+                }, 'slow');
+            });
         });  
     },
     showXJ: function(){
@@ -101,13 +121,19 @@ var mapHandle = {
             $("#page3-xj-title").animate({
                 top: '85%',
                 opacity: '1',
-            }, 'slow');
+            }, 'slow', function(){
+                $("#page3-xj-name").show();
+                $("#page3-xj-name").animate({
+                    top: '55%',
+                    opacity: '1',
+                }, 'slow');
+            });
         });  
     }
 }
-var mapHandlePage4 = {
+var mapHandlePageAnimation4 = {
     nextStep: 1,
-    handleNextHandle(){
+    handleNextHandle:function(){
         switch(this.nextStep){
             case 1:
                 this.nextStep = 2
@@ -141,8 +167,100 @@ var mapHandlePage4 = {
         }, 'slow')
     }
 }
+var HandlePageAnimation15 = {
+    nextStep: 1,
+    handleNextHandle:function(){
+        switch(this.nextStep){
+            case 1:
+                this.nextStep = 2
+                $("#page15-right-one").show();
+                return
+            case 2:
+                this.nextStep = 3 
+                $("#page15-right-two").show();
+                return
+            case 3:
+                this.nextStep = 4 
+                $("#page15-right-three").show();
+                return
+            case 4:
+                this.nextStep = 5 
+                $("#page15-right-four").show();
+                return
+            default:
+                this.nextStep = 1;
+                $("#page15-right-one,#page15-right-two,#page15-right-three,#page15-right-four").hide()
+                return showPage('ppt-page16', 'ppt-page15');
+        }
+    }
+}
+var HandleBollPage19 = {
+    nextStep: 1,
+    handleNextHandle:function(id){
+        switch (this.nextStep) {
+            case 1:
+                this.nextStep = 2
+                this.excuteStyle('bollLeftBottom', id)
+                return
+            case 2:
+                this.nextStep = 3
+                this.excuteStyle('bollRightTop', id)
+                return
+            case 3:
+                this.nextStep = 4
+                this.excuteStyle('bollRightBottom', id)
+                return
+            case 4:
+                this.nextStep = 5
+                this.excuteStyle('bollLeftTop', id)
+                return
+            default:
+                this.nextStep = 1;
+                $(id).css({
+                    top: '45%',
+                    left: '45%'
+                })
+                return showPage('ppt-page20', 'ppt-page19');
+        }
+    },
+    excuteStyle:function(animate, id){
+        $('#'+id).css({
+            '-webkit-animation':animate + ' bollLeftBottom 1s ease-in forwards',
+            'animation': animate + ' 1s ease-in forwards'
+        })
+    }
+}
+var HandleBollPage20 = $.extend({}, HandleBollPage19)
+HandleBollPage20.handleNextHandle = function (id) {
+    switch (this.nextStep) {
+        case 1:
+            this.nextStep = 2
+            this.excuteStyle('bollRightBottom', id)
+            
+            return
+        case 2:
+            this.nextStep = 3
+            this.excuteStyle('bollRightTop', id)
+            return
+        case 3:
+            this.nextStep = 4
+            this.excuteStyle('bollLeftTop', id)
+            return
+        case 4:
+            this.nextStep = 5
+            this.excuteStyle('bollLeftBottom', id)
+            return
+        default:
+            this.nextStep = 1;
+            $(id).css({
+                top: '45%',
+                left: '45%'
+            })
+            return showPage('ppt-page21', 'ppt-page20');
+    }
+}
 $(document).ready(function(){
     // showPage('ppt-page3', 'ppt-page2')
-    showPage('ppt-page2', 'ppt-page11')
+    showPage('ppt-page19', 'ppt-page11')
     htmlFont()
 })

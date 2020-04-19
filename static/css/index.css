@@ -171,6 +171,28 @@ body{
     right: 5%;
     /* bottom:6%; */
 }
+.page3-city-name{
+    position: absolute;
+    display: none;
+    opacity:'0.5';
+    top:100%;
+}
+.page3-zj-name{
+    /* top: 18%; */
+    left: 32%;
+}
+.page3-mgn-name{
+    right: 8%;
+    /* top:8%; */
+}
+.page3-yn-name{
+    left: 25%;
+    /* top:75%; */
+}
+.page3-xj-name{
+    right: 30%;
+    /* top:75%; */
+}
 /*------------ page3 css end-------------------*/
 
 
@@ -311,6 +333,29 @@ body{
     right: 0.01rem;
     bottom: 0.4rem;
 }
+@keyframes page14One {
+    0% {
+        transform:translate3d(0,7rem,0);
+        -webkit-transform:translate3d(0,7rem,0);
+        display: block;
+    }
+
+    to {
+        display: block;
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+}
+
+.page14-answer-one{
+    -webkit-animation: page14One 1s ease-in ;
+    animation: page14One 1s ease-in ;
+}
+.page14-answer-two{
+    -webkit-animation: page14One 1s ease-in 1s ;
+    animation: page14One 1s ease-in 1s;
+}
+
 /*------------ page14 css end-------------------*/
 
 
@@ -353,11 +398,31 @@ body{
     height: 22%;
     margin-bottom: 2%;
     border: 1px solid #eee;
+    display: none;
 }
 .page15-text-img{
     max-height: 100%;
     width: 98%;
 }
+@keyframes pageAnimation {
+    0% {
+        transform:translate3d(0,8rem,0);
+        -webkit-transform:translate3d(0,8rem,0);
+        display: block;
+    }
+
+    to {
+        display: block;
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+}
+
+.page15-right-one, .page15-right-two, .page15-right-three, .page15-right-four{
+    -webkit-animation: pageAnimation 1s ease-in ;
+    animation: pageAnimation 1s ease-in ;
+}
+
 /*------------ page16 css start-------------------*/
 .page16{
     background-repeat: no-repeat;
@@ -490,6 +555,50 @@ body{
     position: absolute;
     top:45%;
     left: 45%;
+}
+@keyframes bollLeftBottom {
+    0% {
+        top:45%;
+        left: 45%;
+    }
+
+    to {
+        top:70%;
+        left: 20%;
+    }
+}
+@keyframes bollRightBottom {
+    0% {
+        top:45%;
+        left: 45%;
+    }
+
+    to {
+        top:70%;
+        left: 80%;
+    }
+}
+@keyframes bollLeftTop {
+    0% {
+        top:45%;
+        left: 45%;
+    }
+
+    to {
+        top:20%;
+        left: 20%;
+    }
+}
+@keyframes bollRightTop {
+    0% {
+        top:45%;
+        left: 45%;
+    }
+
+    to {
+        top:20%;
+        left: 80%;
+    }
 }
 /*------------ page19 css end-------------------*/
 

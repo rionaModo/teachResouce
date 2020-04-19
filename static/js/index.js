@@ -277,6 +277,6 @@ var HandlePageAnimation23 = {
     }
 }
 $(document).ready(function(){
-    showPage('ppt-page23', 'ppt-page11')
+    showPage('ppt-page1', 'ppt-page0')
     htmlFont()
 })

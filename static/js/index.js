@@ -6,9 +6,7 @@ function htmlFont () {
 }
 
 function handleNext(id){
-    $("#page-hannan-map").fadeOut("slow", function(){
-        mapHandle.handleNextHandle();   
-    });
+    mapHandle.handleNextHandle(); 
 }
 function handlePage4(showId, hideId){
     mapHandlePageAnimation4.handleNextHandle();
@@ -47,6 +45,7 @@ var  showPage = (function(){
         prevShowPageId = nextShowPageId;
         $("#ppt-page" + nowPageId).fadeOut();
         $("#ppt-page" + nextShowPageId).fadeIn(); 
+        resetAllStyle()
     }
 })()
 var mapHandle = {
@@ -55,7 +54,11 @@ var mapHandle = {
         switch(this.nextStep){
             case 1:
                 this.nextStep = 2
-                return this.showZj();
+                let that = this
+                $("#page-hannan-map").fadeOut("slow", function(){
+                    that.showZj();
+                });
+                return 
             case 2:
                 this.nextStep = 3 
                 return this.showMgn();
@@ -72,6 +75,7 @@ var mapHandle = {
         }
     },
     showZj: function(){
+        
         $("#page3-zj-title").show();
         $("#page3-zj-title").animate({
             top: '-0.1rem',
@@ -153,6 +157,15 @@ var mapHandle = {
                 }, 'slow');
             });
         });  
+    },
+    resetStyle:function(){
+        this.nextStep = 1
+        $("#page-hannan-map").show();
+        $("#page3-zj-title,#page3-zj-map,#page3-zj-name,#page3-mgn-title,#page3-mgn-map,#page3-mgn-name,#page3-yn-title,#page3-yn-map,#page3-yn-name,#page3-xj-title,#page3-xj-map,#page3-xj-name").css({
+            top: '100%',
+            display: 'none',
+            opacity: '0.5',
+        })
     }
 }
 var mapHandlePageAnimation4 = {
@@ -167,7 +180,7 @@ var mapHandlePageAnimation4 = {
                 return this.showAnimate();
             default:
                 this.nextStep = 1
-                this.resetStyle()
+                // this.resetStyle()
                 return showPage('5', '4');
 
         }
@@ -192,6 +205,7 @@ var mapHandlePageAnimation4 = {
         }, 'slow')
     },
     resetStyle: function(){
+        this.nextStep = 1
         $("#page4-xj-map,#page4-xj-text,#page4-xj-animate").css({
             height: '0',
             top: '100%'
@@ -301,6 +315,10 @@ var HandlePageAnimation23 = {
         $("#page23-answer-" + this.nextStep).show();
         this.nextStep++
     }
+}
+function resetAllStyle(){
+    mapHandle.resetStyle()
+    mapHandlePageAnimation4.resetStyle();
 }
 $(document).ready(function(){
     showPage('1', '0')

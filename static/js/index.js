@@ -167,6 +167,7 @@ var mapHandlePageAnimation4 = {
                 return this.showAnimate();
             default:
                 this.nextStep = 1
+                this.resetStyle()
                 return showPage('5', '4');
 
         }
@@ -189,6 +190,12 @@ var mapHandlePageAnimation4 = {
             height: '70%',
             top: '50%',
         }, 'slow')
+    },
+    resetStyle: function(){
+        $("#page4-xj-map,#page4-xj-text,#page4-xj-animate").css({
+            height: '0',
+            top: '100%'
+        })
     }
 }
 var HandlePageAnimation15 = {

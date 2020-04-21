@@ -15,15 +15,55 @@
    
 </head>
 <body>
-    <div class="main-ppt">
-		<div class="page page1" id="ppt-page1" onclick="showPage('ppt-page2', 'ppt-page1')">
+	<div class="wrapper arrowhead-right" id="arrowhead-right" onclick="showPage('next')">
+		<div class="icon first">
+			<svg version="1.1" id="icon_arrow_svg" x="0px" y="0px" viewBox="0 0 125 125" enable-background="new 0 0 125 125" xml:space="preserve">
+				<circle class="back_circle" cx="63" cy="63" r="60" fill="black" />
+				<g class="inner">
+					<path fill="black" d="M62.5,7C93.1,7,118,31.9,118,62.5c0,30.6-24.9,55.5-55.5,55.5S7,93.1,7,62.5C7,31.9,31.9,7,62.5,7 M62.5,0 C28,0,0,28,0,62.5C0,97,28,125,62.5,125S125,97,125,62.5C125,28,97,0,62.5,0L62.5,0z" />
+				</g>
+	
+				<g id="circle_arrow">
+					<g>
+						<polygon class="arrow_bottom" fill-rule="evenodd" clip-rule="evenodd" fill="black" points="72.2,58.2 51,79.2 55.9,84 77,63" />
+					</g>
+					<g>
+						<polygon class="arrow_top" fill-rule="evenodd" clip-rule="evenodd" fill="black" points="51,46.8 55.9,42 77,63 72.2,67.8" />
+					</g>
+				</g>
+	
+			</svg>
+		</div>
+	</div>
+	<div class="wrapper arrowhead-left" id="arrowhead-left" onclick="showPage('prev')">
+			<div class="icon first">
+				<svg version="1.1" id="icon_arrow_svg" x="0px" y="0px" viewBox="0 0 125 125" enable-background="new 0 0 125 125" xml:space="preserve">
+					<circle class="back_circle" cx="63" cy="63" r="60" fill="black" />
+					<g class="inner">
+						<path fill="black" d="M62.5,7C93.1,7,118,31.9,118,62.5c0,30.6-24.9,55.5-55.5,55.5S7,93.1,7,62.5C7,31.9,31.9,7,62.5,7 M62.5,0 C28,0,0,28,0,62.5C0,97,28,125,62.5,125S125,97,125,62.5C125,28,97,0,62.5,0L62.5,0z" />
+					</g>
+		
+					<g id="circle_arrow">
+						<g>
+							<polygon class="arrow_bottom" fill-rule="evenodd" clip-rule="evenodd" fill="black" points="72.2,58.2 51,79.2 55.9,84 77,63" />
+						</g>
+						<g>
+							<polygon class="arrow_top" fill-rule="evenodd" clip-rule="evenodd" fill="black" points="51,46.8 55.9,42 77,63 72.2,67.8" />
+						</g>
+					</g>
+		
+				</svg>
+			</div>
+		</div>
+    <div class="main-ppt">	
+		<div class="page page1" id="ppt-page1" onclick="showPage('2', '1')">
 			<img class="page-title" src="./static/images/title.jpg"></img>
 			<img class="page1-text" src="./static/images/page1/text.png"></img>
 			<div class="page-show">1/30</div>
 		</div>
 
 
-		<div class="page page2" id="ppt-page2" onclick="showPage('ppt-page3', 'ppt-page2')">
+		<div class="page page2" id="ppt-page2" onclick="showPage('3', '2')">
 			<div class="page2-content">
 					<div class="page2-N" ></div>
 					<div class="page2-E"></div>
@@ -33,7 +73,7 @@
 			</div>
 			<div class="page-show">2/30</div>
 		</div>
-		<div class="page page3" id="ppt-page3" onclick="handleNext('ppt-page3', 'ppt-page2')">
+		<div class="page page3" id="ppt-page3" onclick="handleNext('3', '2')">
 			<div class="page-hannan">
 				<img id="page-hannan-map" class="page3-iamg" src="./static/images/page3/hn.jpg"></img>
 				<div id="page-hannan-text" class="page3-text-box" >
@@ -169,34 +209,34 @@
 			<div class="page-show">3/30</div>
 		</div>
 
-		<div class="page page4" id="ppt-page4" onclick="handlePage4('ppt-page4', 'ppt-page3')">
+		<div class="page page4" id="ppt-page4" onclick="handlePage4('4', '3')">
 			<img id="page4-xj-map" class="page4-xj-map" src="./static/images/page4/xj.png"></img>
 			<img id="page4-xj-text" class="page4-xj-text" src="./static/images/page4/xjt.png"></img>
 			<img id="page4-xj-animate" class="page4-xj-animate" src="./static/images/page4/xjd.png"></img>
 			<div class="page-show">4/30</div>
 		</div>
-		<div class="page page5" id="ppt-page5" onclick="showPage('ppt-page6', 'ppt-page5')">
+		<div class="page page5" id="ppt-page5" onclick="showPage('6', '5')">
 			<div class="page-show">5/30</div>
 		</div>
-		<div class="page page6" id="ppt-page6" onclick="showPage('ppt-page7', 'ppt-page6')">
+		<div class="page page6" id="ppt-page6" onclick="showPage('7', '6')">
 			<div class="page-show">6/30</div>
 		</div>
-		<div class="page page7" id="ppt-page7" onclick="showPage('ppt-page8', 'ppt-page7')">
+		<div class="page page7" id="ppt-page7" onclick="showPage('8', '7')">
 			<div class="page-show">7/30</div>
 		</div>
-		<div class="page page8" id="ppt-page8" onclick="showPage('ppt-page9', 'ppt-page8')">
+		<div class="page page8" id="ppt-page8" onclick="showPage('9', '8')">
 			<div class="page-show">8/30</div>
 		</div>
-		<div class="page page9" id="ppt-page9" onclick="showPage('ppt-page10', 'ppt-page9')">
+		<div class="page page9" id="ppt-page9" onclick="showPage('10', '9')">
 			<div class="page-show">9/30</div>
 		</div>
-		<div class="page page10" id="ppt-page10" onclick="showPage('ppt-page11', 'ppt-page10')">
+		<div class="page page10" id="ppt-page10" onclick="showPage('11', '10')">
 			<div class="page-show">10/30</div>
 		</div>
-		<div class="page page11" id="ppt-page11" onclick="showPage('ppt-page12', 'ppt-page11')">
+		<div class="page page11" id="ppt-page11" onclick="showPage('12', '11')">
 			<div class="page-show">11/30</div>
 		</div>
-		<div  class="page page12" id="ppt-page12" onclick="showPage('ppt-page13', 'ppt-page12')">
+		<div  class="page page12" id="ppt-page12" onclick="showPage('13', '12')">
 			<div  class="page12-text-box" >
 				<ul start="0">
 					<li id="p157" class="l1">
@@ -222,10 +262,10 @@
 			</div>
 			<div class="page-show">12/30</div>
 		</div>
-		<div class="page page13" id="ppt-page13" onclick="showPage('ppt-page14', 'ppt-page13')">
+		<div class="page page13" id="ppt-page13" onclick="showPage('14', '13')">
 			<div class="page-show">13/30</div>
 		</div>
-		<div class="page page14" id="ppt-page14" onclick="showPage('ppt-page15', 'ppt-page14')">
+		<div class="page page14" id="ppt-page14" onclick="showPage('15', '14')">
 			<img id="page14-question" class="page14-question" src="./static/images/page14/question.jpg"></img>
 			<div id="page14-text-box" class="page14-text-box">
 				<ul>
@@ -320,7 +360,7 @@
 			<div class="page-show">14/30</div>
 		</div>
 
-		<div class="page page15" id="ppt-page15" onclick="handlePage15('ppt-page16', 'ppt-page15')">
+		<div class="page page15" id="ppt-page15" onclick="handlePage15('16', '15')">
 			<img class="page15-title" src="./static/images/page15/title.png"></img>
 			<div class="page15-bfc-contenter">
 				<ul class="page15-left">
@@ -354,13 +394,13 @@
 			</div>
 			<div class="page-show">15/30</div>
 		</div>
-		<div class="page page16" id="ppt-page16" onclick="showPage('ppt-page17', 'ppt-page16')">
+		<div class="page page16" id="ppt-page16" onclick="showPage('17', '16')">
 			<div class="page-show">16/30</div>
 		</div>
-		<div class="page page17" id="ppt-page17" onclick="showPage('ppt-page18', 'ppt-page17')">
+		<div class="page page17" id="ppt-page17" onclick="showPage('18', '17')">
 			<div class="page-show">17/30</div>
 		</div>
-		<div class="page page18" id="ppt-page18" onclick="showPage('ppt-page19', 'ppt-page18')">
+		<div class="page page18" id="ppt-page18" onclick="showPage('19', '18')">
 			<!-- <div class="page18-text-box">
 				
 			</div> -->
@@ -430,7 +470,7 @@
 
 
 
-		<div class="page page19" id="ppt-page19" onclick="handlePage19('ppt-page20', 'ppt-page19')">
+		<div class="page page19" id="ppt-page19" onclick="handlePage19('20', '19')">
 			<div class="page19-li page19-li-first">
 				<img  class="page19-li-img" src="./static/images/page18/token.jpg"></img>
 			</div>
@@ -454,7 +494,7 @@
 			</div>
 			<div class="page-show">19/30</div>
 		</div>
-		<div class="page page20" id="ppt-page20" onclick="handlePage20('ppt-page21', 'ppt-page20')">
+		<div class="page page20" id="ppt-page20" onclick="handlePage20('21', '20')">
 			<div class="page19-li page19-li-first">
 				<img  class="page19-li-img" src="./static/images/page18/token.jpg"></img>
 			</div>
@@ -478,10 +518,10 @@
 			</div>
 			<div class="page-show">20/30</div>
 		</div>
-		<div class="page page21" id="ppt-page21" onclick="showPage('ppt-page22', 'ppt-page21')">
+		<div class="page page21" id="ppt-page21" onclick="showPage('22', '21')">
 			<div class="page-show">21/30</div>
 		</div>
-		<div class="page page22" id="ppt-page22" onclick="showPage('ppt-page23', 'ppt-page22')">
+		<div class="page page22" id="ppt-page22" onclick="showPage('23', '22')">
 			<img  class="page22-img" src="./static/images/page22/title.jpg"></img>
 			<div id="t16" class="page22-text-box" >
 				<ol start="0">
@@ -494,7 +534,7 @@
 			</div>
 			<div class="page-show">22/30</div>
 		</div>
-		<div  class="page page23" id="ppt-page23" onclick="handlePage23('ppt-page24', 'ppt-page23')">
+		<div  class="page page23" id="ppt-page23" onclick="handlePage23('24', '23')">
 			<img  class="page23-img-title" src="./static/images/page23/title.png"></img>
 			<img  class="page23-img-dh" src="./static/images/page23/dh.GIF"></img>
 			<div id="24578" class="df"
@@ -631,24 +671,24 @@
 			</div>
 			<div class="page-show">23/30</div>
 		</div>
-		<div class="page page24" id="ppt-page24" onclick="showPage('ppt-page25', 'ppt-page24')">
+		<div class="page page24" id="ppt-page24" onclick="showPage('25', '24')">
 			<div class="page-show">24/30</div>
 		</div>
-		<div class="page page25" id="ppt-page25" onclick="showPage('ppt-page26', 'ppt-page25')">
+		<div class="page page25" id="ppt-page25" onclick="showPage('26', '25')">
 			<div class="page-show">25/30</div>
 		</div>
-		<div class="page page26" id="ppt-page26" onclick="showPage('ppt-page27', 'ppt-page26')">
+		<div class="page page26" id="ppt-page26" onclick="showPage('27', '26')">
 			<div class="page-show">26/30</div>
 		</div>
-		<div class="page page27" id="ppt-page27" onclick="showPage('ppt-page28', 'ppt-page27')">
+		<div class="page page27" id="ppt-page27" onclick="showPage('28', '27')">
 			<img  class="page27-img-content" src="./static/images/page27/text.png"></img>
 			<div class="page-show">27/30</div>
 		</div>
-		<div class="page page28" id="ppt-page28" onclick="showPage('ppt-page29', 'ppt-page28')">
+		<div class="page page28" id="ppt-page28" onclick="showPage('29', '28')">
 			<img  class="page28-img-content" src="./static/images/page28/cxt.png"></img>
 			<div class="page-show">28/30</div>
 		</div>
-		<div class="page page29" id="ppt-page29" onclick="showPage('ppt-page30', 'ppt-page29')">
+		<div class="page page29" id="ppt-page29" onclick="showPage('30', '29')">
 			<div id="t26" class="page29-text-box" style="">
 				<ol start="0">
 					<li id="p413" class="l1">
@@ -737,7 +777,7 @@
 			</div>
 			<div class="page-show">29/30</div>
 		</div>
-		<div class="page page30" id="ppt-page30" onclick="showPage('ppt-page1', 'ppt-page30')">
+		<div class="page page30" id="ppt-page30" onclick="showPage('1', '30')">
 			<div class="page-show">30/30</div>
 		</div>
     </div>

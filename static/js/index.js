@@ -3,11 +3,8 @@ function htmlFont () {
     let deviceWidth = window.innerWidth;
     deviceWidth = deviceWidth > 1200 ? 1200 : deviceWidth < 375 ? 375 : deviceWidth;
     document.documentElement.style.fontSize = deviceWidth / 12 + 'px';
-  }
-function showPage(showId, hideId){
-    $("#" + hideId).fadeOut();
-    $("#" + showId).fadeIn(); 
 }
+
 function handleNext(id){
     $("#page-hannan-map").fadeOut("slow", function(){
         mapHandle.handleNextHandle();   
@@ -28,6 +25,30 @@ function handlePage20(showId, hideId){
 function handlePage23(showId, hideId){
     HandlePageAnimation23.handleNextHandle();
 }
+var  showPage = (function(){
+    let prevShowPageId = 1;
+    return function(nextShowPageId, nowPageId){
+        if(arguments.length === 1) {
+            if(nextShowPageId === 'prev'){
+                if(parseInt(prevShowPageId) === 1){
+                    return
+                }
+                nowPageId = prevShowPageId;
+                nextShowPageId = parseInt(prevShowPageId)-1
+            }
+            if(nextShowPageId === 'next'){
+                if(parseInt(prevShowPageId) === 30){
+                    return
+                }
+                nowPageId = prevShowPageId;
+                nextShowPageId =  parseInt(prevShowPageId)+1
+            }
+        }
+        prevShowPageId = nextShowPageId;
+        $("#ppt-page" + nowPageId).fadeOut();
+        $("#ppt-page" + nextShowPageId).fadeIn(); 
+    }
+})()
 var mapHandle = {
     nextStep: 1,
     handleNextHandle:function(){
@@ -46,7 +67,7 @@ var mapHandle = {
                     return this.showXJ();
             default:
                 this.nextStep =  1
-                return showPage('ppt-page4', 'ppt-page3');
+                return showPage('4', '3');
 
         }
     },
@@ -146,7 +167,7 @@ var mapHandlePageAnimation4 = {
                 return this.showAnimate();
             default:
                 this.nextStep = 1
-                return showPage('ppt-page5', 'ppt-page4');
+                return showPage('5', '4');
 
         }
     },
@@ -193,9 +214,8 @@ var HandlePageAnimation15 = {
             default:
                 this.nextStep = 1;
                 $("#page15-right-one,#page15-right-two,#page15-right-three,#page15-right-four").hide()
-                return showPage('ppt-page16', 'ppt-page15');
+                return showPage('16', '15');
         }
-        // showPage('ppt-page24', 'ppt-page23')
     }
 }
 var HandleBollPage19 = {
@@ -224,7 +244,7 @@ var HandleBollPage19 = {
                     top: '45%',
                     left: '45%'
                 })
-                return showPage('ppt-page20', 'ppt-page19');
+                return showPage('20', '19');
         }
     },
     excuteStyle:function(animate, id){
@@ -260,23 +280,22 @@ HandleBollPage20.handleNextHandle = function (id) {
                 top: '45%',
                 left: '45%'
             })
-            return showPage('ppt-page21', 'ppt-page20');
+            return showPage('21', '20');
     }
 }
 var HandlePageAnimation23 = {
     nextStep: 1,
     handleNextHandle:function(){
         if(this.nextStep>7){
-            showPage('ppt-page24', 'ppt-page23')
+            showPage('24', '23')
             $(".page23-answer").hide();
             return;
         }
         $("#page23-answer-" + this.nextStep).show();
         this.nextStep++
-        // showPage('ppt-page24', 'ppt-page23')
     }
 }
 $(document).ready(function(){
-    showPage('ppt-page1', 'ppt-page0')
+    showPage('1', '0')
     htmlFont()
 })

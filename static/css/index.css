@@ -232,7 +232,8 @@ body:hover .arrowhead-left,body:hover  .arrowhead-right{
 .page3-map.page2-map{
     width: 150%;
     top: 0;
-    height: auto;;
+    height: auto;
+    background-color: #ffffff;
 }
 .page2-N{
     top: -3.2rem;

@@ -8,6 +8,9 @@ function htmlFont () {
 function handleNext(id){
     mapHandle.handleNextHandle(); 
 }
+function handlePage3(showId, hideId){
+    mapHandlePageAnimation3.handleNextHandle();
+}
 function handlePage4(showId, hideId){
     mapHandlePageAnimation4.handleNextHandle();
 }
@@ -168,6 +171,32 @@ var mapHandle = {
         })
     }
 }
+var mapHandlePageAnimation3 = {
+    nextStep: 1,
+    handleNextHandle:function(){
+        switch(this.nextStep){
+            case 1:
+                this.nextStep = 2
+                
+            case 2:
+                this.nextStep = 3 
+                return this.showDerection();
+            default:
+                this.nextStep = 1
+                // this.resetStyle()
+                return showPage('3', '2');
+
+        }
+    },
+    showDerection: function(){
+        $('.page2-content').fadeIn();
+        $('.page2-travel').hide();
+    },
+    resetStyle: function(){
+        $('.page2-content').hide();
+        $('.page2-travel').show();
+    }
+}
 var mapHandlePageAnimation4 = {
     nextStep: 1,
     handleNextHandle:function(){
@@ -318,6 +347,7 @@ var HandlePageAnimation23 = {
 }
 function resetAllStyle(){
     mapHandle.resetStyle()
+    mapHandlePageAnimation3.resetStyle();
     mapHandlePageAnimation4.resetStyle();
 }
 $(document).ready(function(){
